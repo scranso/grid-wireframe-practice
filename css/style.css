@@ -15,6 +15,7 @@ body {
     grid-template-columns: 1fr;
     row-gap: 1rem;
     border-radius: 10px;
+    /* min-height: 100vh; */
 }
 
 .header {
@@ -23,32 +24,61 @@ body {
     grid-template-columns: auto;
     border-radius: 10px;
     justify-content: center;
+    text-align: center;
     padding: 1rem;
 }
 
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: 
+            "header header header"
+            "asideL main asideR"
+            "footer footer footer";
         column-gap: 1rem;
+        row-gap: 1rem;
+        min-height: 80vh;
     }
     .aside-top {
-        grid-column: 1;
+        display: grid;
+        grid-area: asideL;
+        height: 100%;
+        align-items: center;
         
     }
 
     .aside-bottom {
-        grid-column: 3;
-        
+        display: grid;
+        grid-area: asideR;
+        height: 100%;
+        align-items: center;
     }
 
     .main {
-        grid-column: 2;
-        
+        grid-area: main;
+        display: grid;
+        grid-template-rows: auto auto 1;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: end;
     }
-    .header,
-    .footer {
+
+    .header {
+        grid-area: header;
+        align-items: center;
+    }
+
+    .article {
         grid-column: 1 / -1;
+        font-size: 24px;
     }
+
+    .footer {
+        display: grid;
+        grid-area: footer;
+        text-align: center;
+        align-items: center;
+    }
+
 }
 
 .aside-top {
@@ -61,8 +91,6 @@ body {
 .column {
     background: rgb(237, 59, 127);
     border-radius: 12px;
-    row-gap: 1rem; 
-    text-align: center;
     font-size: 20px;
     padding: 10px;
 }
@@ -73,6 +101,7 @@ body {
     padding: 1rem;
     gap: 1rem;
     border-radius: 10px;
+    text-align: center;
 }
 
 .aside-bottom {
