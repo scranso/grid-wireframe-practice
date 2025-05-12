@@ -1,0 +1,66 @@
+@import url("./reset.css"); 
+
+body {
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    color: white;
+    border-radius: 10px;
+    font-size: xx-large;
+    padding: 2rem;
+    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.header {
+    background-color: rgba(208, 25, 129, 0.986);
+    display: grid;
+    grid-template-columns: auto;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.aside-top {
+    background-color: rgb(28, 101, 143);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.column {
+    background: rgb(237, 59, 127);
+    border-radius: 12px;
+    row-gap: 1rem; 
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.main {
+    display: grid;
+    background-color: rgb(114, 205, 114);
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.aside-bottom {
+    background: rgb(57, 172, 214);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer {
+    background-color: rgb(213, 127, 23);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+}
